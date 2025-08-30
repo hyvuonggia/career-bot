@@ -1,16 +1,21 @@
 # GitHub Copilot Instructions for career-bot
 
 ## Project Overview
-A Python-based career bot application that helps users with career guidance, job search, and professional development. The application uses environment variables for configuration and follows Python best practices.
+A virtual representation of myself for professional networking and recruitment interactions. This bot is designed to be showcased on LinkedIn profile, allowing recruiters and potential employers to engage with my professional persona in an interactive and informative way. The application uses OpenAI API for intelligent conversations, environment variables for configuration, and follows Python best practices.
 
 ## Technical Stack
 - **Language**: Python 3.8+
+- **AI**: OpenAI API for natural language processing
 - **Environment Management**: python-dotenv
-- **Architecture**: Modular Python application
+- **Architecture**: Modular Python application with function calling capabilities
 - **Configuration**: Environment variables (.env)
+- **Notifications**: Telegram integration for real-time alerts
+- **Document Processing**: PDF handling for resume analysis
 
 ## Required Python Packages
 - python-dotenv (for environment variable management)
+- openai (for AI-powered conversations)
+- pypdf (for PDF document processing)
 - Additional packages will be added as project evolves
 
 ## Code Style & Conventions
@@ -36,15 +41,17 @@ A Python-based career bot application that helps users with career guidance, job
 
 3. Install dependencies:
    ```bash
-   pip install python-dotenv
-   # Or use requirements.txt if available:
-   # pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 
 4. Environment Configuration:
-   - Copy `.env.example` to `.env` (if available)
-   - Or create a `.env` file in the project root
-   - Add necessary environment variables
+   - Create a `.env` file in the project root
+   - Add necessary environment variables:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+   TELEGRAM_CHAT_ID=your_telegram_chat_id
+   ```
 
 5. Run the application:
    ```bash
@@ -94,6 +101,8 @@ A Python-based career bot application that helps users with career guidance, job
 career-bot/
 ├── app.py              # Main application file
 ├── resources/          # Resource files
+├── requirements.txt    # Python dependencies
+├── README.md          # Project documentation
 ├── .env               # Environment variables (not tracked in git)
 ├── .gitignore         # Git ignore file
 └── .github/           # GitHub configuration
@@ -102,16 +111,18 @@ career-bot/
 ## Environment Variables
 Create a `.env` file with the following variables:
 ```env
-# Add your environment variables here
-# Example:
-# API_KEY=your_api_key_here
-# DATABASE_URL=your_database_url
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Telegram Notifications
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_CHAT_ID=your_telegram_chat_id
 ```
 
 ## Notes
 - The `.env` file is automatically ignored by git for security
-- Add new dependencies to this file as the project evolves
-- Consider creating a `requirements.txt` file for easier dependency management
+- Add new dependencies to requirements.txt as the project evolves
+- This bot is designed to be showcased on LinkedIn profile for recruiter interactions
 
 ## Common Patterns for Copilot
 
