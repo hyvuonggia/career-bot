@@ -1,0 +1,5 @@
+I develop backend at Bosch Global Software Technologies Vietnam, mostly in Java/Spring Boot. I like clean code, fast iterations, and getting useful features into production.
+
+I’m currently hands-on with agentic AI: agents that can think a step ahead, use tools/APIs, and take repetitive tasks off a developer’s plate. I’m learning fast and testing what actually works—planning, evals, and safety included.
+
+Earlier, I worked on web features for a small company in Norway. I studied Computer Science at the University of Debrecen.
