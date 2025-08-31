@@ -1,3 +1,9 @@
+---
+title: career-bot
+app_file: app.py
+sdk: gradio
+sdk_version: 5.44.1
+---
 # Career Bot 🤖
 
 A virtual representation of myself for professional networking and recruitment interactions. This bot is designed to be showcased on my LinkedIn profile, allowing recruiters and potential employers to engage with my professional persona in an interactive and informative way.
