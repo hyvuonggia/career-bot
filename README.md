@@ -50,7 +50,24 @@ This career bot serves as an intelligent interface between me and recruiters, pr
    pip install -r requirements.txt
    ```
 
-4. **Environment setup**:
+4. **Get Telegram Bot Token**:
+   - Open Telegram and search for `@BotFather`
+   - Start a chat with BotFather and send `/newbot`
+   - Follow the instructions to create your bot (choose a name and username)
+   - BotFather will provide you with a token like: `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`
+   - Save this token for the next step
+
+5. **Get Telegram Chat ID**:
+   - Start a chat with your newly created bot
+   - Send any message to your bot
+   - Open this URL in your browser (replace `YOUR_BOT_TOKEN` with your actual token):
+     ```
+     https://api.telegram.org/botYOUR_BOT_TOKEN/getUpdates
+     ```
+   - Look for the `"chat":{"id":` value in the response (it will be a number like `123456789`)
+   - This number is your Chat ID
+
+6. **Environment setup**:
    Create a `.env` file in the project root with:
    ```env
    OPENAI_API_KEY=your_openai_api_key_here
@@ -58,7 +75,7 @@ This career bot serves as an intelligent interface between me and recruiters, pr
    TELEGRAM_CHAT_ID=your_telegram_chat_id
    ```
 
-5. **Run the application**:
+7. **Run the application**:
    ```bash
    python app.py
    ```
